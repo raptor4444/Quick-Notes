@@ -71,6 +71,25 @@ int main(){
     findUnique(arr, 5);
     findDuplicate(arr,5);
     
+    
+    
+    //FINDING DUPLICATE:
+    
+    int arr1[5] = {1,2,3,3,2};
+	int ans = 0;
+	int size = sizeof(arr1)/sizeof(int);
+	
+	for(int i=0; i<size; i++){
+	    ans = ans^arr1[i];
+	}
+
+    for(int i=1; i<size; i++){
+        ans = ans^i;
+    }
+	
+	cout<<ans<<endl;
+    
+    
     return 0;
 
 }
